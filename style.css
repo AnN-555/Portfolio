@@ -22,8 +22,16 @@ html {
   font-family: "Roboto", serif;
   font-size: 16px;
   font-weight: 300;
-  color: #212322;
+  color: #f3f7f5;
   scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: radial-gradient(circle at center, #1d1d1d 10%, #111 100%);
+  color: #fff;
 }
 
 h1,
@@ -44,7 +52,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: #ebe3d7;
+  background-color: #4b4b4b;
   z-index: 999;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -65,7 +73,7 @@ h4 {
   position: relative;
   text-decoration: none;
   text-align: center;
-  color: #212322;
+  color: #f3f7f5;
   transition: all 0.5s ease;
   white-space: nowrap;
   font-weight: 300;
@@ -111,15 +119,14 @@ h4 {
   border-radius: 5px;
   width: auto;
   height: 3rem;
-  color: #fff;
-  background-color: #212322;
+  background-color: #f3f7f5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .feature-button:hover {
-  color: #212322;
+  color: #f3f7f5;
   background-color: #9b8d5f;
 }
 
@@ -145,13 +152,57 @@ h4 {
   margin-bottom: 30px;
 }
 
+/* timeline line */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #444;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+}
+
+.toggle {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.content {
+  display: none; /* hidden by default */
+  margin-left: 20px;
+}
+
+.timeline-item.active {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item.active .content {
+  display: inline-block; /* show side by side */
+}
+
 /* Footer layout */
 /* Footer */
 .footer {
   display: flex;
   justify-content: space-around;
   height: auto;
-  background-color: #ebe3d7;
+  background-color: #4b4b4b;
   padding: 6.25vw 0;
 }
 
@@ -172,7 +223,7 @@ h4 {
 .footer a {
   font-size: 1rem;
   display: block;
-  color: #212322;
+  color: #f3f7f5;
   text-decoration: none;
   margin-bottom: 1.6vw;
 }
@@ -190,7 +241,6 @@ h4 {
   .footer {
     flex-wrap: wrap;
     padding: 60px 0;
-    background-color: #ebe3d7;
     height: auto;
     padding-right: max(2rem, 50% - 850px);
     padding-left: max(2rem, 50% - 850px);
@@ -218,7 +268,6 @@ h4 {
     position: fixed;
     font-size: 1rem;
     padding: 0 20px;
-    background-color: #ebe3d7;
     z-index: 999;
   }
 
@@ -233,7 +282,7 @@ h4 {
     display: block;
     font-size: 1.75rem;
     cursor: pointer;
-    color: #212322;
+    color: #f3f7f5;
     z-index: 1001;
     margin-right: 15px;
     order: 1;
@@ -271,7 +320,6 @@ h4 {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: #ebe3d7;
     align-items: center;
     z-index: 1000;
     padding: 20px;
@@ -302,11 +350,11 @@ h4 {
 
   .menu-list.menu-open li {
     width: 100%;
-    border-bottom: 1px solid #212322;
+    border-bottom: 1px solid #f3f7f5;
   }
 
   .menu-list.menu-open li:first-child {
-    border-top: 1px solid #212322;
+    border-top: 1px solid #f3f7f5;
   }
 
   .menu-list.menu-open li a {
@@ -314,7 +362,7 @@ h4 {
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    color: #212322;
+    color: #f3f7f5;
     font-size: 1.5rem;
     width: 100%;
     transition: background-color 0.3s ease;
