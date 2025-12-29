@@ -41,6 +41,7 @@ h4 {
   font-family: "Old Standard TT", serif;
   font-style: normal;
   line-height: normal;
+  
 }
 
 /* Navigation */
@@ -77,6 +78,7 @@ h4 {
   transition: all 0.5s ease;
   white-space: nowrap;
   font-weight: 300;
+  margin-left: 5vw;
 }
 
 /* underline */
@@ -155,14 +157,14 @@ h4 {
 /* timeline line */
 .timeline {
   position: relative;
-  margin: 40px 0;
-  padding-left: 40px;
+  margin: 5vh 0;
+  padding-left: 4vw;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 20px;
+  left: 2vw;
   top: 0;
   bottom: 0;
   width: 4px;
@@ -170,30 +172,29 @@ h4 {
 }
 
 .timeline-item {
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
+  display: flex;
+  align-items: center;
 }
 
 .toggle {
   background: #000;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 1vw 3vw;
+  border-radius: 1vw;
   cursor: pointer;
   display: inline-block;
 }
 
 .content {
-  display: none;
-  margin-left: 20px;
+  margin-left: 3vw;
+  color: #fff;
 }
 
-.timeline-item.active {
+.container {
   display: flex;
-  align-items: center;
-}
-
-.timeline-item.active .content {
-  display: inline-block;
+  flex-direction: column;
+  margin-left: 3vw;
 }
 
 /* Footer layout */

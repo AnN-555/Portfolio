@@ -39,12 +39,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const item = toggle.parentElement;
-
-      // Toggle active state
-      item.classList.toggle("active");
-    });
-  });
 });
