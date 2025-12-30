@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="./assest/css/style.css" />
+    <link rel="stylesheet" href="../assest/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,9 +23,9 @@
       <!--menu-->
       <div class="menu-list">
         <ul>
-          <li><a href="./">HOME</a></li>
-          <li><a href="./pages/myProject.html">MY PROJECT</a></li>
-          <li><a href="./pages/contact.html">CONTACT</a></li>
+          <li><a href=".././">HOME</a></li>
+          <li><a href="./myProject.html">MY PROJECT</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
         </ul>
       </div>
       <!--upcoming feature-->
@@ -34,29 +34,24 @@
       </div> -->
     </nav>
 
-    <div class="container">
-      <h1>Here's what I have been through</h1>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h2 class="toggle">2017</h2>
-          <p class="content">Study Doctor of Preventive Medicine
-            at University of Medicine and Pharmacy at Ho Chi Minh city</p>
-        </div>
-
-        <div class="timeline-item">
-          <h2 class="toggle">2023</h2>
-          <p class="content">Graduated UMP and start on my passion in technology. Study Bachelor of 
-            Infomation Technology at University of Information Technology at Ho Chi Minh city</p>
-        </div>
-
-        <div class="timeline-item">
-          <h2 class="toggle">Now</h2>
-          <p class="content">I'm still working on my passionate path that i have chosen</p>
-        </div>
+    <div class="contact-body">
+      <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mkonenbl" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
 
-    <!-- Footer layout -->
     <footer class="footer">
       <div class="footer-infor">
         <h3>Here's my contact</h3>
@@ -81,6 +76,6 @@
         </div>
       </div>
     </footer>
-    <script src="./assest/js/script.js"></script>
+    <script src="../assest/css/style.css"></script>
   </body>
 </html>
