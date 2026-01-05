@@ -54,6 +54,7 @@
 .menu-list li a:hover::after {
   width: 7.8vw;
 }
+
 /* Footer */
 .footer {
   display: flex;
@@ -133,7 +134,7 @@
     height: 2rem;
   }
 
-  /* Hiện hamburger, ẩn close */
+  /* Show/close hamburger */
   #hamburger {
     display: block;
     font-size: 1.75rem;
@@ -147,14 +148,6 @@
   .menu-list {
     order: 3;
     display: none;
-  }
-
-  .upcoming-feature {
-    order: 4;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
   }
 
   #close {
@@ -255,16 +248,6 @@
 
 /* Responsive media and max width 550px */
 @media screen and (max-width: 550px) {
-  html {
-    font-size: 14px;
-  }
-
-  .feature-button {
-    font-size: 0.75rem;
-    padding: 0 15px;
-    height: 2rem;
-  }
-
   .nav {
     font-size: 0.85rem;
     height: 50px;

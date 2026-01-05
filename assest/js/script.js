@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const close = document.getElementById("close");
   const menuList = document.querySelector(".menu-list");
   const body = document.body;
-  const toggles = document.querySelectorAll(".toggle");
 
-  //Hiển thị hamburger menu
+  // Show hamburger menu
   hamburger.addEventListener("click", function () {
     hamburger.style.display = "none";
     close.style.display = "block";
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.style.overflow = "hidden";
   });
 
-  //Ẩn hamburger menu
+  // Close hamburger menu
   close.addEventListener("click", function () {
     close.style.display = "none";
     hamburger.style.display = "";
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.style.overflow = "auto";
   });
 
-  //Đóng menu và reset state
+  // Close menu and reset state
   function closeMenu() {
     close.style.display = "none";
     hamburger.style.display = "";
@@ -29,11 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     body.style.overflow = "auto";
   }
 
-  // Tự động đóng menu khi màn hình lớn
+  // Auto close menu in width screen
   const breakpoint = 990; //CSS breakpoint
   window.addEventListener("resize", function () {
     if (window.innerWidth > breakpoint) {
-      // Nếu menu đang mở, tự động đóng
       if (menuList.classList.contains("menu-open")) {
         closeMenu();
       }
