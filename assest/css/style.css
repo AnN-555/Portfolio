@@ -49,10 +49,27 @@ section {
 
 #about {
   padding-top: 100px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.video-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 #project, #contact {
   background: #323233;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#project.show, #contact.show, #about.show, .video-section.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .upcoming-feature {
