@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const close = document.getElementById("close");
   const menuList = document.querySelector(".menu-list");
+  const sections = document.querySelectorAll("#about, #project, #contact, .video-section");
   const body = document.body;
 
   // Show hamburger menu
@@ -29,12 +30,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Auto close menu in width screen
-  const breakpoint = 990; //CSS breakpoint
+  const breakpoint = 990;
   window.addEventListener("resize", function () {
     if (window.innerWidth > breakpoint) {
       if (menuList.classList.contains("menu-open")) {
         closeMenu();
       }
     }
+  });
+
+  // Observer for transition
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
   });
 });
