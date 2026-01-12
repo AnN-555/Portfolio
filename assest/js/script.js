@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const close = document.getElementById("close");
   const menuList = document.querySelector(".menu-list");
+  const menuItems = menuList.querySelectorAll("li a");
   const sections = document.querySelectorAll("#about, #project, #contact, .video-section");
   const body = document.body;
 
@@ -19,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.style.display = "";
     menuList.classList.remove("menu-open");
     body.style.overflow = "auto";
+  });
+
+  // Close menu when clicking any li/a inside menu-list
+  menuItems.forEach(item => {
+    item.addEventListener("click", function () {
+      closeMenu();
+    });
   });
 
   // Close menu and reset state
