@@ -78,6 +78,18 @@
   margin-bottom: 1.6vw;
 }
 
+.footer-infor {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer a {
   font-size: 1rem;
   display: block;
