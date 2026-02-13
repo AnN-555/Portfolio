@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1",
+  "description": "Portfolio website with Cypress tests",
+  "scripts": {
+    "start": "npx serve .", 
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.0.0",
+    "serve": "^14.0.0"
+  }
+}
