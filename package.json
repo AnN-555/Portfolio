@@ -1,14 +1,34 @@
 {
   "name": "portfolio",
-  "version": "1",
-  "description": "Portfolio website with Cypress tests",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "npx serve .", 
-    "test": "cypress run",
-    "cypress:open": "cypress open"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "framer-motion": "^11.1.7",
+    "lucide-react": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "cypress": "^15.0.0",
-    "serve": "^14.0.0"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "cypress": "^15.14.2",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.3.1"
   }
 }
